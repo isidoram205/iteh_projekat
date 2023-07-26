@@ -1,10 +1,19 @@
-import React from "react";
+
+import { 
+  Login
+  
+} from "pages";
+
 
 
 function App() {
   
+  //nije admin
   return (
-    <div> Taste of Belgrade</div>
+   <div>
+    <Login />
+   </div>
+    
   );
 }
 
