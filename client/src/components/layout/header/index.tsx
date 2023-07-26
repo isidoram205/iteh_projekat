@@ -20,7 +20,7 @@ export const Header: React.FC = () => {
 
   return shouldRenderHeader ? (
     <AppBar color="default" position="sticky" elevation={0} sx = {{
-      background:'#FCFCFC'
+      background:'#A75D5D'
     }}>
       <Toolbar>
         <Stack

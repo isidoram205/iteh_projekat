@@ -34,6 +34,8 @@ import {
   useRefineContext,
 } from "@pankod/refine-core";
 
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+
 import { Title as DefaultTitle } from "../title";
 
 export const Sider: typeof DefaultSider = ({ render }) => {
@@ -224,7 +226,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
   const dashboard = hasDashboard ? (
     <CanAccess resource="dashboard" action="list">
       <Tooltip
-        title={translate("dashboard.title", "Dashboard")}
+        title={translate("dashboard.title", "Home")}
         placement="right"
         disableHoverListener={!collapsed}
         arrow
@@ -248,23 +250,24 @@ export const Sider: typeof DefaultSider = ({ render }) => {
             justifyContent: "center",
           }}
         >
-          <ListItemIcon
+          <HomeRoundedIcon
             sx={{
               justifyContent: "center",
               minWidth: 36,
-              color: "#8080191",
+              color: "#FFC3A1",
               marginLeft:'6px',
               marginRight:'14px',
             }}
           >
             <Dashboard />
-          </ListItemIcon>
+          </HomeRoundedIcon>
           <ListItemText
-            primary={translate("dashboard.title", "Dashboard")}
+            primary={translate("dashboard.title", "Home")}
             primaryTypographyProps={{
               noWrap: true,
               fontSize: "16px",
               fontWeight: selectedKey === "/" ? "bold" : "normal",
+              color: "#FFC3A1"
             }}
           />
         </ListItemButton>
@@ -391,7 +394,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
             display: { xs: "none", md: "block" },
             "& .MuiDrawer-paper": {
               width: drawerWidth,
-              bgcolor: "#FCFCFC",
+              bgcolor: "#A75D5D",
               overflow: "hidden",
               transition: "width 200ms cubic-bezier(0.4, 0, 0.6, 1) 0ms",
             },
@@ -419,13 +422,13 @@ export const Sider: typeof DefaultSider = ({ render }) => {
           </Box>
           <Button
             sx={{
-              background: "#475BE8",
+              background: "linear-gradient(90deg, rgba(167,93,93,1) 3%, rgba(240,153,125,1) 26%, rgba(201,132,119,1) 83%, rgba(255,195,161,1) 99%)#475BE8",
               color: "primary.contrastText",
               textAlign: "center",
               borderRadius: 0,
               borderTop: "1px solid #ffffff1a",
               '&:hover':{
-              background: '#1e36e8'
+              background: 'linear-gradient(90deg, rgba(240,153,125,1) 66%, rgba(201,132,119,1) 100%)'
               }
             }}
             fullWidth
