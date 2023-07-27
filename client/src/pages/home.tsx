@@ -38,9 +38,7 @@ const Home = () => {
                 mt="25px"
                 sx={{backgroundColor: "#D3756B"}}
                 >
-            <Typography fontSize={18} fontWeight={500} color="#FFC3A1">
-Tastes of Belgrade: Your Ultimate Restaurants Guide
-
+            <Typography fontSize={18} fontWeight={500} color="#FFC3A1" textAlign={"justify"}>
 Welcome to "Tastes of Belgrade" - the ultimate restaurants guide app that will take you on a delightful culinary journey through the vibrant city of Belgrade, Serbia. If you are a food lover or a traveler looking for the best dining experiences, this app is your go-to companion!
 
 Discover a Gastronomic Paradise:
@@ -53,7 +51,7 @@ Explore Local Favorites and Hidden Gems:
 Beyond the popular tourist spots, we'll take you off the beaten path to discover Belgrade's hidden culinary gems. Unearth charming local eateries, family-owned bistros, and street food stalls that serve up the most delectable dishes with a warm Serbian smile.
                     </Typography>
                     <Stack direction="column"></Stack>
-    <img src= {photoImage3} style={{ height: '370px', width: '650px', 
+    <img src= {photoImage3} style={{ height: '400px', width: '700px', 
     padding: '25px', borderRadius: '35px', marginLeft: '280px'}} />
     <Stack/>
                 </Box>
@@ -91,9 +89,9 @@ Beyond the popular tourist spots, we'll take you off the beaten path to discover
                 mt="25px"
                 sx={{backgroundColor: "#D3756B"}}
                 >
-                <Typography fontSize="18px" fontWeight={600} color="#FFC3A1"> LATEST RESTAURANTS </Typography>
+                <Typography fontSize="18px" fontWeight={600} color="#FFC3A1"> TTRENDING RESTAURANTS </Typography>
                 <Box mt={2.5} sx={{display: 'flex', flexWrap:'wrap', gap:4}}>
-                <div>...Latest restaurants...</div>
+                <div>...Trending restaurants...</div>
                 </Box>
 
             </Box>
