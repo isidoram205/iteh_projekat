@@ -24,7 +24,27 @@ const Foods = ({title, value, src, text, text2} : FoodChartProps) => {
     >
       <Stack direction="column">
         <Typography fontSize={20} color="#000814" fontWeight={400} fontStyle="italic">{title}</Typography>
-        <Typography fontSize={44} color="#edede9" fontWeight={900} mt={1} fontStyle="italic">{value}</Typography>
+        <Typography fontSize={44} color="#edede9" fontWeight={900} mt={1} fontStyle="italic"
+        style={{
+          position: 'relative',
+          animation: 'zoom-in-zoom-out 2s infinite',
+          transformOrigin: 'center', // Adjust the transform origin as needed
+        }}
+        >{value}<style>
+        {`
+         @keyframes zoom-in-zoom-out {
+          0% {
+            transform: scale(1, 1);
+          }
+          50% {
+            transform: scale(1.2, 1.2); // Adjust the scale values
+          }
+          100% {
+            transform: scale(1, 1);
+          }
+        }
+        `}
+      </style></Typography>
         <Typography fontSize={20} color="#000814" fontWeight={400} fontStyle="italic">{text}</Typography>
         <Typography fontSize={20} color="#000814" fontWeight={400} fontStyle="italic">{text2}</Typography>
      

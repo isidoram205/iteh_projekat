@@ -14,10 +14,10 @@ export interface ProfileProps {
     name: string,
     avatar: string,
     email: string,
-    properties: Array | undefined
+    restaurants: Array | undefined
 }
 
-export interface PropertyProps {
+export interface RestaurantProps {
     _id: string,
     title: string,
     description: string,
