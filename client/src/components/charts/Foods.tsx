@@ -19,14 +19,14 @@ const Foods = ({title, value, src, text, text2} : FoodChartProps) => {
       borderRadius="15px"
       minHeight="110px"
       width="fit-content"
-      sx={{backgroundColor: "#D3756B"}}
+      sx={{backgroundColor: "#d5bdaf"}}
 
     >
       <Stack direction="column">
-        <Typography fontSize={20} color="#FFC3A1" fontStyle="italic">{title}</Typography>
-        <Typography fontSize={44} color="#A75D5D" fontWeight={900} mt={1} fontStyle="italic">{value}</Typography>
-        <Typography fontSize={20} color="#FFC3A1" fontStyle="italic">{text}</Typography>
-        <Typography fontSize={20} color="#FFC3A1" fontStyle="italic">{text2}</Typography>
+        <Typography fontSize={20} color="#000814" fontWeight={400} fontStyle="italic">{title}</Typography>
+        <Typography fontSize={44} color="#edede9" fontWeight={900} mt={1} fontStyle="italic">{value}</Typography>
+        <Typography fontSize={20} color="#000814" fontWeight={400} fontStyle="italic">{text}</Typography>
+        <Typography fontSize={20} color="#000814" fontWeight={400} fontStyle="italic">{text2}</Typography>
      
       </Stack>
 

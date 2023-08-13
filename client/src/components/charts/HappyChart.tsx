@@ -19,13 +19,13 @@ const HappyChart = ({title, value, src, text} : SimpleChartProps) => {
       borderRadius="15px"
       minHeight="110px"
       width="fit-content"
-      sx={{backgroundColor: "#D3756B"}}
+      sx={{backgroundColor: "#d5bdaf"}}
 
     >
       <Stack direction="column">
-        <Typography fontSize={25} color="#FFC3A1" fontStyle="italic">{title}</Typography>
-        <Typography fontSize={44} color="#A75D5D" fontWeight={900} mt={1} fontStyle="italic">{value}</Typography>
-        <Typography fontSize={25} color="#FFC3A1" fontStyle="italic">{text}</Typography>
+        <Typography fontSize={25} color="#000814" fontWeight={500} fontStyle="italic">{title}</Typography>
+        <Typography fontSize={44} color="#edede9" fontWeight={900} mt={1} fontStyle="italic">{value}</Typography>
+        <Typography fontSize={25} color="#000814" fontWeight={500} fontStyle="italic">{text}</Typography>
       
       </Stack>
 

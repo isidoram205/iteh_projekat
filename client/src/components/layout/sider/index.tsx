@@ -180,12 +180,12 @@ export const Sider: typeof DefaultSider = ({ render }) => {
                 py: isNested ? 1.25 : 1,
                 "&.Mui-selected": {
                   "&:hover": {
-                    backgroundColor: 
-                    isSelected ? '#1e36e8' :
+                    background: 
+                    isSelected ? 'linear-gradient( 109.5deg,  rgba(229,233,177,1) 11.2%, rgba(223,205,187,1) 100.2% )' :
                     "transparent",
                   },
-                  backgroundColor: 
-                  isSelected ? '#475be8' :
+                  background: 
+                  isSelected ? 'linear-gradient( 109.5deg,  rgba(229,233,177,1) 11.2%, rgba(223,205,187,1) 100.2% )' :
                   "transparent",
                 },
                 justifyContent: "center",
@@ -199,7 +199,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
                 sx={{
                   justifyContent: "center",
                   minWidth: 36,
-                  color: isSelected ? '#fff'
+                  color: isSelected ? '#000814'
                   : '#808191',
                 }}
               >
@@ -211,7 +211,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
                   noWrap: true,
                   fontSize: "16px",
                   fontWeight: isSelected ? "bold" : "normal",
-                  color: isSelected ? '#fff'
+                  color: isSelected ? '#000814'
                   : '#808191',
                   marginLeft: '10px'
                 }}
@@ -243,9 +243,9 @@ export const Sider: typeof DefaultSider = ({ render }) => {
             py: 1,
             "&.Mui-selected": {
               "&:hover": {
-                backgroundColor: "transparent",
+                background: "linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);",
               },
-              backgroundColor: "transparent",
+              background: "linear-gradient( 109.5deg,  rgba(229,233,177,1) 11.2%, rgba(223,205,187,1) 100.2% )",
             },
             justifyContent: "center",
           }}
@@ -254,7 +254,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
             sx={{
               justifyContent: "center",
               minWidth: 36,
-              color: "#FFC3A1",
+              color: "#000814",
               marginLeft:'6px',
               marginRight:'14px',
             }}
@@ -267,7 +267,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
               noWrap: true,
               fontSize: "16px",
               fontWeight: selectedKey === "/" ? "bold" : "normal",
-              color: "#FFC3A1"
+              color: "#000814"
             }}
           />
         </ListItemButton>
@@ -394,7 +394,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
             display: { xs: "none", md: "block" },
             "& .MuiDrawer-paper": {
               width: drawerWidth,
-              bgcolor: "#A75D5D",
+              bgcolor: "#d6ccc2",
               overflow: "hidden",
               transition: "width 200ms cubic-bezier(0.4, 0, 0.6, 1) 0ms",
             },
@@ -422,20 +422,20 @@ export const Sider: typeof DefaultSider = ({ render }) => {
           </Box>
           <Button
             sx={{
-              background: "linear-gradient(90deg, rgba(167,93,93,1) 3%, rgba(240,153,125,1) 26%, rgba(201,132,119,1) 83%, rgba(255,195,161,1) 99%)#475BE8",
+              background: "linear-gradient( 109.5deg,  rgba(229,233,177,1) 11.2%, rgba(223,205,187,1) 100.2% )",
               color: "primary.contrastText",
               textAlign: "center",
               borderRadius: 0,
               borderTop: "1px solid #ffffff1a",
               '&:hover':{
-              background: 'linear-gradient(90deg, rgba(240,153,125,1) 66%, rgba(201,132,119,1) 100%)'
+              background: 'linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);'
               }
             }}
             fullWidth
             size="large"
             onClick={() => setCollapsed((prev) => !prev)}
           >
-            {collapsed ? <ChevronRight /> : <ChevronLeft />}
+            {collapsed ? <ChevronRight  sx={{ color: "#000814"}} /> : <ChevronLeft sx={{ color: "#000814"}}/>}
           </Button>
         </Drawer>
         <Box

@@ -9,6 +9,8 @@ import PropertyReferrals from './charts/PropertyReferrals';
 import TotalRevenue from './charts/TotalRevenue';
 import HappyChart from './charts/HappyChart';
 import Foods from './charts/Foods';
+import CustomButton from './common/CustomButton';
+import RestaurantCard from './common/RestaurantCard';
 
 
 export {
@@ -16,5 +18,7 @@ export {
   PropertyReferrals,
   TotalRevenue,
   HappyChart,
-  Foods
+  Foods,
+  CustomButton,
+  RestaurantCard
 };

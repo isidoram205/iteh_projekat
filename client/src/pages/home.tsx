@@ -19,14 +19,15 @@ const Home = () => {
 
     return(
         <Box
-        sx={{backgroundColor: '#FFC3A1', display: 'flex'}}
+        sx={{background: "linear-gradient(109.5deg, rgba(223, 213, 204, 1) 11.2%, rgba(223, 205, 187, 1) 100.2%)", display: 'flex', borderRadius:'25px'}}
         >
         <Box
-        sx={{backgroundColor: '#FFC3A1', padding: '30px', display: "flex", flexWrap:'wrap', gap:4}}
+        sx={{background: 'linear-gradient(109.5deg, rgba(223, 213, 204, 1) 11.2%, rgba(223, 205, 187, 1) 100.2%)', padding: '30px', display: "flex", flexWrap:'wrap', gap:4,
+        borderRadius:'25px'}}
         >
-            <Typography fontSize={25} fontWeight={700} color="#A75D5D"
+            <Typography fontSize={25} fontWeight={700} color="#000814"
             fontStyle='italic'>
-            Taste of Belgrade <RestaurantIcon sx={{color: "#A75D5D", fontStyle: "italic"}}/>
+            Taste of Belgrade <RestaurantIcon sx={{color: "#000814", fontStyle: "italic"}}/>
             <Box
                 flex = {1}
                 borderRadius="15px"
@@ -36,9 +37,9 @@ const Home = () => {
                 flexDirection="column"
                 minWidth="100%"
                 mt="25px"
-                sx={{backgroundColor: "#D3756B"}}
+                sx={{backgroundColor: "#d5bdaf"}}
                 >
-            <Typography fontSize={18} fontWeight={500} color="#FFC3A1" textAlign={"justify"}>
+            <Typography fontSize={18} fontWeight={500} color="#000814" textAlign={"justify"}>
 Welcome to "Tastes of Belgrade" - the ultimate restaurants guide app that will take you on a delightful culinary journey through the vibrant city of Belgrade, Serbia. If you are a food lover or a traveler looking for the best dining experiences, this app is your go-to companion!
 
 Discover a Gastronomic Paradise:
@@ -50,15 +51,9 @@ We understand that finding the perfect restaurant can be overwhelming, especiall
 Explore Local Favorites and Hidden Gems:
 Beyond the popular tourist spots, we'll take you off the beaten path to discover Belgrade's hidden culinary gems. Unearth charming local eateries, family-owned bistros, and street food stalls that serve up the most delectable dishes with a warm Serbian smile.
                     </Typography>
-                    <Stack direction="column"></Stack>
-    <img src= {photoImage3} style={{ height: '400px', width: '700px', 
-    padding: '25px', borderRadius: '35px', marginLeft: '280px'}} />
-    <Stack/>
                 </Box>
 
-            </Typography>
-
-            <Box mt="20px" display="flex" flexWrap="wrap" gap={2} paddingTop={5}>
+                <Box mt="20px" display="flex" flexWrap="wrap" gap={2} paddingTop={5}>
                 <HappyChart
                 title='Over '
                 value={10000}
@@ -78,6 +73,10 @@ Beyond the popular tourist spots, we'll take you off the beaten path to discover
 
             </Box>
 
+            </Typography>
+
+
+
             <Box
                 flex = {1}
                 borderRadius="15px"
@@ -87,9 +86,9 @@ Beyond the popular tourist spots, we'll take you off the beaten path to discover
                 flexDirection="column"
                 minWidth="100%"
                 mt="25px"
-                sx={{backgroundColor: "#D3756B"}}
+                sx={{backgroundColor: "#c9ada7"}}
                 >
-                <Typography fontSize="18px" fontWeight={600} color="#FFC3A1"> TTRENDING RESTAURANTS </Typography>
+                <Typography fontSize="20px" fontWeight={600} color="#000814"> TRENDING RESTAURANTS </Typography>
                 <Box mt={2.5} sx={{display: 'flex', flexWrap:'wrap', gap:4}}>
                 <div>...Trending restaurants...</div>
                 </Box>

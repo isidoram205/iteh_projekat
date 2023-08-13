@@ -14,6 +14,7 @@ import{
   AccountCircleOutlined,
   PeopleAltOutlined,
   VillaOutlined,
+  Restaurant
 } from '@mui/icons-material';
 
 import InfoIcon from '@mui/icons-material/Info';
@@ -26,7 +27,8 @@ import { Title, Sider, Layout, Header } from "components/layout";
 
 import { 
   Login,
-  Home
+  Home,
+  AllRestaurants
 
 } from "pages";
 
@@ -46,9 +48,10 @@ function App() {
           catchAll={<ErrorComponent />}
           resources={[
             {
-              name: "properties",
-              
-              icon: <VillaOutlined></VillaOutlined>
+              name: "restaurants",
+              options:{ label: 'Restaurants' },
+              list:AllRestaurants,
+              icon: <Restaurant></Restaurant>
             },
             {
               name: "agents",

@@ -1,6 +1,7 @@
 
 import Home from './home';
 import { Login } from './login';
+import AllRestaurants from './all-restaurants';
 
 
 //predstavlja izvoz svih komponenti koje se koriste u aplikaciji. Svaka od ovih komponenti se uvozi iz svog odgovarajućeg fajla
@@ -8,6 +9,7 @@ import { Login } from './login';
 export {
 
   Home,
-  Login
+  Login,
+  AllRestaurants
   
 };
