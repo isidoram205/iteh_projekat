@@ -30,7 +30,8 @@ import {
   AllRestaurants,
   CreateRestaurant,
   EditRestaurant,
-  MyProfile
+  MyProfile,
+  RestaurantDetails
 
 } from "pages";
 
@@ -164,8 +165,10 @@ const authProvider: AuthProvider = {
               name: "restaurants",
               options:{ label: 'Restaurants' },
               list:AllRestaurants,
+              show:RestaurantDetails,
               create:CreateRestaurant,
               edit:EditRestaurant,
+              
               icon: <Restaurant></Restaurant>
             },
             {

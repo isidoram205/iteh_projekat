@@ -105,7 +105,7 @@ const Profile = ({ type, name, avatar, email, restaurants }: ProfileProps) => (
                                             fontSize={14}
                                             color="##000814"
                                         >
-                                            4517 Downing Street, London, UK
+                                            Spasodavska 12, Belgrade, Serbia
                                         </Typography>
                                     </Box>
                                 </Stack>
@@ -136,7 +136,7 @@ const Profile = ({ type, name, avatar, email, restaurants }: ProfileProps) => (
                                                 color="#000814"
                                                 noWrap
                                             >
-                                                +0123 456 7890
+                                                +381 64 1235 899
                                             </Typography>
                                         </Box>
                                     </Stack>
@@ -173,8 +173,9 @@ const Profile = ({ type, name, avatar, email, restaurants }: ProfileProps) => (
         </Box>
 
         {restaurants.length > 0 && (
-            <Box mt={2.5} borderRadius="15px" padding="20px" bgcolor="#FCFCFC">
-                <Typography fontSize={18} fontWeight={600} color="#000814">
+            <Box mt={2.5} borderRadius="15px" padding="20px" bgcolor="#FCFCFC"
+            sx={{backgroundColor: "#c9ada7"}}>
+                <Typography fontSize={20} fontWeight={600} color="#000814">
                     {type} Restaurants
                 </Typography>
 

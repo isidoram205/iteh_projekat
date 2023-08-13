@@ -18,7 +18,8 @@ const RestaurantCard = ({id, title, location, price, photo}: RestaurantCardProps
           boxShadow: '0 22px 45px 2px rgba(176, 176, 176, 0.1)'
         },
         cursor:'pointer',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        backgroundColor: "#d5bdaf"
       }}
       elevation={0}
     >
@@ -42,8 +43,8 @@ const RestaurantCard = ({id, title, location, price, photo}: RestaurantCardProps
             <Typography fontSize={14} color='#808191'>{location}</Typography>
           </Stack>
         </Stack>
-        <Box px={1.5} py={0.5} borderRadius={1} bgcolor ="#dadefa" height = "fit-content" >
-          <Typography fontSize={12} fontWeight={600} color="#475be8" >${price}</Typography>
+        <Box px={1.5} py={0.5} borderRadius={1} sx ={{background: "linear-gradient( 109.5deg,  rgba(229,233,177,1) 11.2%, rgba(223,205,187,1) 100.2% )"}} height = "fit-content" >
+          <Typography fontSize={12} fontWeight={600} color="#000814" >${price}</Typography>
         </Box>
       </CardContent>
     </Card>

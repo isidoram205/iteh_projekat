@@ -4,18 +4,33 @@ import{ Typography, Box, Stack, fontFamily} from '@pankod/refine-mui'
 
 import photoImage from '../assets/happy.jpg'
 import photoImage2 from '../assets/types.jpg'
-import photoImage3 from '../assets/enjoy.jpg'
-import RestaurantIcon from '@mui/icons-material/Restaurant';
 
 
 import{
     HappyChart,
-    Foods
+    Foods,
+    RestaurantCard
 } from 'components';
  
 
 const Home = () => {
+    {/*za vracanje propertija koristimo ovu kuku */}
+    const {data, isLoading, isError} = useList({
+        resource:'restaurants',
+        config: {
+            pagination:{
+            pageSize: 6
+            }
+        }
 
+
+    })
+//koristi se opcionalni operator ?. da bi se izbeglo pristupanje undefined vrednostima 
+//u objektu data. Ako data ne postoji, uzmemo prazan niz umesto undefined vrednosti.
+    const latestRestaurants = data?.data ?? [];
+
+    if(isLoading) return <Typography>Loading...</Typography>
+    if(isError) return <Typography>Something went wrong!</Typography>
 
     return(
         <Box
@@ -89,7 +104,17 @@ Beyond the popular tourist spots, we'll take you off the beaten path to discover
                 >
                 <Typography fontSize="20px" fontWeight={600} color="#000814"> TRENDING RESTAURANTS📈 </Typography>
                 <Box mt={2.5} sx={{display: 'flex', flexWrap:'wrap', gap:4}}>
-                <div>...Trending restaurants...</div>
+                {latestRestaurants.map((restaurant) => (
+
+                    <RestaurantCard
+                    key={restaurant._id}
+                    id={restaurant._id}
+                    title={restaurant.title}
+                    location={restaurant.location}
+                    price={restaurant.price}
+                    photo={restaurant.photo}
+                    />
+                ))}
                 </Box>
 
             </Box>

@@ -297,7 +297,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
           sx={{
             justifyContent: "center",
             minWidth: 36,
-            color: '#808191',
+            color: '#000814',
           }}
         >
           <Logout />
@@ -307,6 +307,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
           primaryTypographyProps={{
             noWrap: true,
             fontSize: "16px",
+            color:'#000814'
           }}
         />
       </ListItemButton>

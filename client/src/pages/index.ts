@@ -5,6 +5,7 @@ import AllRestaurants from './all-restaurants';
 import CreateRestaurant from './create-restaurant';
 import EditRestaurant from './edit-restaurant';
 import MyProfile from './my-profile';
+import RestaurantDetails from './restaurant-details';
 
 
 //predstavlja izvoz svih komponenti koje se koriste u aplikaciji. Svaka od ovih komponenti se uvozi iz svog odgovarajućeg fajla
@@ -16,6 +17,7 @@ export {
   AllRestaurants,
   CreateRestaurant,
   EditRestaurant,
-  MyProfile
+  MyProfile,
+  RestaurantDetails
   
 };
