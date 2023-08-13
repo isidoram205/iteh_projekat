@@ -177,7 +177,7 @@ const AllRestaurants = () => {
                       title = {`Sort price ${currentPrice === 'asc' ? '↑' : '↓'}`}
                       handleClick={() => toggleSort('price')}
                       backgroundColor="linear-gradient( 109.5deg,  rgba(229,233,177,1) 11.2%, rgba(223,205,187,1) 100.2% )"
-                      color="#fcfcfc"
+                      color="#000814"
                       
                     />
 
@@ -218,7 +218,7 @@ const AllRestaurants = () => {
                     >
                       {/*padajuca lista za tip nekretnine, mapira jedan po jedan i prikazuje u meniju malim slovima*/}
                       <MenuItem value="">All</MenuItem>
-                      {['Italian Restaurant', 'Steakhouse', 'Sushi Bar', 'Mexican Taqueria', 'Café or Bistro', 'Seafood Restaurant'].map((type) => (
+                      {['Italian Restaurant', 'Steakhouse', 'Sushi Bar', 'Mexican Taqueria', 'Café or Bistro', 'Seafood Restaurant', 'Traditional Restaurant'].map((type) => (
                           <MenuItem key={type} value={type.toLowerCase()}>{type}</MenuItem>
                       ))}
                     </Select>
@@ -244,7 +244,7 @@ const AllRestaurants = () => {
             //vodi na novu stranicu za kreiranje
             handleClick={() => navigate('/restaurants/create')}
             backgroundColor="#475be8"
-            color="#fcfcfc"
+            color="#000814"
             icon={<Add />}
           />
         )}

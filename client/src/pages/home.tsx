@@ -25,9 +25,8 @@ const Home = () => {
         sx={{background: 'linear-gradient(109.5deg, rgba(223, 213, 204, 1) 11.2%, rgba(223, 205, 187, 1) 100.2%)', padding: '30px', display: "flex", flexWrap:'wrap', gap:4,
         borderRadius:'25px'}}
         >
-            <Typography fontSize={25} fontWeight={700} color="#000814"
-            fontStyle='italic'>
-            Taste of Belgrade <RestaurantIcon sx={{color: "#000814", fontStyle: "italic"}}/>
+            <Typography fontSize={25} fontWeight={700} color="#000814">
+            Taste of Belgrade 🍽️
             <Box
                 flex = {1}
                 borderRadius="15px"
@@ -49,7 +48,7 @@ Curated Restaurant Recommendations:
 We understand that finding the perfect restaurant can be overwhelming, especially in a city as diverse as Belgrade. That's why our team of food enthusiasts has carefully curated a selection of top-notch eateries to satisfy every craving. Whether you're seeking a fine-dining experience, a cozy cafe, or a hidden gem loved by the locals, "Tastes of Belgrade" has got you covered.
 
 Explore Local Favorites and Hidden Gems:
-Beyond the popular tourist spots, we'll take you off the beaten path to discover Belgrade's hidden culinary gems. Unearth charming local eateries, family-owned bistros, and street food stalls that serve up the most delectable dishes with a warm Serbian smile.
+Beyond the popular tourist spots, we'll take you off the beaten path to discover Belgrade's hidden culinary gems. Unearth charming local eateries, family-owned bistros, and street food stalls that serve up the most delectable dishes with a warm Serbian smile.👨‍🍳
                     </Typography>
                 </Box>
 
@@ -58,7 +57,7 @@ Beyond the popular tourist spots, we'll take you off the beaten path to discover
                 title='Over '
                 value={10000}
                 src= {photoImage}
-                text='Happy Customers!'
+                text='Happy Customers!😃'
 
                 />
 
@@ -67,7 +66,7 @@ Beyond the popular tourist spots, we'll take you off the beaten path to discover
                 value={500}
                 src= {photoImage2}
                 text= 'different types of'
-                text2= 'restaurants located in Belgrade!'
+                text2= 'restaurants located in Belgrade!!!!🍕🥙🍣🥧'
 
                 />
 
@@ -88,7 +87,7 @@ Beyond the popular tourist spots, we'll take you off the beaten path to discover
                 mt="25px"
                 sx={{backgroundColor: "#c9ada7"}}
                 >
-                <Typography fontSize="20px" fontWeight={600} color="#000814"> TRENDING RESTAURANTS </Typography>
+                <Typography fontSize="20px" fontWeight={600} color="#000814"> TRENDING RESTAURANTS📈 </Typography>
                 <Box mt={2.5} sx={{display: 'flex', flexWrap:'wrap', gap:4}}>
                 <div>...Trending restaurants...</div>
                 </Box>

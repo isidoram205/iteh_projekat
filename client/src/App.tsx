@@ -13,7 +13,6 @@ import {
 import{
   AccountCircleOutlined,
   PeopleAltOutlined,
-  VillaOutlined,
   Restaurant
 } from '@mui/icons-material';
 
@@ -28,7 +27,9 @@ import { Title, Sider, Layout, Header } from "components/layout";
 import { 
   Login,
   Home,
-  AllRestaurants
+  AllRestaurants,
+  CreateRestaurant,
+  EditRestaurant
 
 } from "pages";
 
@@ -51,6 +52,8 @@ function App() {
               name: "restaurants",
               options:{ label: 'Restaurants' },
               list:AllRestaurants,
+              create:CreateRestaurant,
+              edit:EditRestaurant,
               icon: <Restaurant></Restaurant>
             },
             {
