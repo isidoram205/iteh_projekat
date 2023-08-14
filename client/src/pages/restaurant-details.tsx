@@ -3,10 +3,10 @@ import { Typography, Box, Stack } from "@pankod/refine-mui";
 import { useDelete, useGetIdentity, useShow } from "@pankod/refine-core";
 import { useParams, useNavigate } from "@pankod/refine-react-router-v6";
 import {
-    ChatBubble,
+    MapOutlined,
     Delete,
     Edit,
-    Phone,
+    ReviewsOutlined,
     Place
 } from "@mui/icons-material";
 
@@ -51,7 +51,8 @@ const RestaurantDetails = () => {
         
 //login se poziva kada se korisnik uloguje. Ona prima podatke o korisnikovom autentifikacionom token-u kao argument.
 // U ovoj funkciji se proverava da li je autentifikacioni token ispravan i, ako jeste, izdvoji se profileObj koji sadrži 
-//podatke o korisniku. Zatim se korisnikov name, email i avatar sačuvaju u bazi podataka, a zatim se kreira objekat user 
+//podatke o korisniku. 
+//Zatim se korisnikov name, email i avatar sačuvaju u bazi podataka, a zatim se kreira objekat user 
 //koji se skladišti u localStorage. Ako je korisnik admin, to se takođe označava u localStorage.
         login: async({ credential }: CredentialResponse) => {
           const profileObj = credential ? parseJwt(credential) : null;
@@ -80,7 +81,7 @@ const RestaurantDetails = () => {
               })
             );
               // proveri da li je  admin i oznaci u bazi
-              if (profileObj.email === "homenow.manager@gmail.com") {
+              if (profileObj.email === "tasteofbelgrade2023@gmail.com") {
                 localStorage.setItem("isAdmin", "true");
               } else {
                 localStorage.removeItem("isAdmin");
@@ -145,16 +146,6 @@ const RestaurantDetails = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
     const navigate = useNavigate();
     const { data: user } = useGetIdentity();
     const { queryResult } = useShow();
@@ -177,10 +168,10 @@ const RestaurantDetails = () => {
     const isCurrentUser = user.email === restaurantDetails.creator.email;
 
 
-    {/*za brisanje propertija*/}
-    //handleDeleteRestaurant() funkcija se poziva kada korisnik klikne na dugme za brisanje propertija.
+    {/*za brisanje restorana*/}
+    //handleDeleteRestaurant() funkcija se poziva kada korisnik klikne na dugme za brisanje restorana.
     // U ovoj funkciji se prikazuje prozor za potvrdu brisanja, a ako korisnik potvrdi brisanje, poziva 
-    //se funkcija mutate() koja briše propertij. U slučaju uspešnog brisanja, korisnik se preusmerava na stranicu sa listom propertija.
+    //se funkcija mutate() koja briše restoran. U slučaju uspešnog brisanja, korisnik se preusmerava na stranicu sa listom restorana.
     const handleDeleteRestaurant = () => {
         const response = confirm(
             "Are you sure you want to delete this restaurant?",
@@ -249,7 +240,7 @@ const RestaurantDetails = () => {
                                 textTransform="capitalize"
                             > Restaurant rating:
                                 </Typography>
-                                {/*zvezdice */}
+                                {/*kapice */}
                                 {ranNiz.map((item) => (
                                     <img src={chef} alt="Icon Image" style={{width: "32px", height: "32px"}}></img>
                                 ))}
@@ -380,7 +371,7 @@ const RestaurantDetails = () => {
                                     fontWeight={400}
                                     color="#000814"
                                 >
-                                    Agent
+                                    Restaurant Broker
                                 </Typography>
                             </Box>
 
@@ -438,12 +429,12 @@ const RestaurantDetails = () => {
                                 }}
                             />) : (
                                 <CustomButton
-                                title={!isCurrentUser ? "Message" : "Edit"}
+                                title={!isCurrentUser ? "Google Maps" : "Edit"}
                                 backgroundColor="#475BE8"
                                 color="#000814"
                                 fullWidth
                                 icon={
-                                    !isCurrentUser ? <ChatBubble /> : <Edit />
+                                    !isCurrentUser ? <MapOutlined /> : <Edit />
                                 }
                                 handleClick={() => {
                                     if (isCurrentUser) {
@@ -451,7 +442,7 @@ const RestaurantDetails = () => {
                                             `/restaurants/edit/${restaurantDetails._id}`,
                                         );
                                     } else{
-                                        window.open('https://www.whatsapp.com/', '_blank');
+                                        window.open('https://www.google.com/maps/place/Belgrade/@44.8152453,20.422597,11z/data=!3m1!4b1!4m6!3m5!1s0x475a7aa3d7b53fbd:0x1db8645cf2177ee4!8m2!3d44.8125449!4d20.4612299!16zL20vMGZoemY?entry=ttu', '_blank');
                                     }
                                 }}
                             />
@@ -474,17 +465,17 @@ const RestaurantDetails = () => {
                             />
                             ) : (
                                 <CustomButton
-                                title={!isCurrentUser ? "Call" : "Delete"}
+                                title={!isCurrentUser ? "View Reviews" : "Delete"}
                                 backgroundColor={
                                     !isCurrentUser ? "#2ED480" : "#d42e2e"
                                 }
                                 color="#000814"
                                 fullWidth
-                                icon={!isCurrentUser ? <Phone /> : <Delete />}
+                                icon={!isCurrentUser ? <ReviewsOutlined /> : <Delete />}
                                 handleClick={() => {
                                     if (isCurrentUser) handleDeleteRestaurant();
                                     else{
-                                        window.open('https://www.whatsapp.com/', '_blank');
+                                        window.open('https://www.tripadvisor.com/Restaurants-g294472-Belgrade.html', '_blank');
                                     }
                                 }}
                             />

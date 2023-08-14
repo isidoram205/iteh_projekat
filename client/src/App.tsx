@@ -13,7 +13,8 @@ import {
 import{
   AccountCircleOutlined,
   PeopleAltOutlined,
-  Restaurant
+  Restaurant,
+  StackedLineChartOutlined
 } from '@mui/icons-material';
 
 import InfoIcon from '@mui/icons-material/Info';
@@ -31,7 +32,10 @@ import {
   CreateRestaurant,
   EditRestaurant,
   MyProfile,
-  RestaurantDetails
+  RestaurantDetails,
+  BrokerProfile,
+  Brokers,
+  Statistics
 
 } from "pages";
 
@@ -92,7 +96,7 @@ const authProvider: AuthProvider = {
         })
       );
          // proveri da li je  admin i oznaci u bazi
-        if (profileObj.email === "homenow.manager@gmail.com") {
+        if (profileObj.email === "tasteofbelgrade2023@gmail.com") {
           localStorage.setItem("isAdmin", "true");
         } else {
           localStorage.removeItem("isAdmin");
@@ -150,6 +154,53 @@ const authProvider: AuthProvider = {
     }
   },
 };
+//kreranje promenjive isAdmin samo ukoliko je u bazi data kolona true
+const isAdmin = localStorage.getItem("isAdmin") === "true";
+
+//ako je ulogovan admin
+if(isAdmin){
+  return(
+    <ColorModeContextProvider>
+      <CssBaseline />
+      <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
+      <RefineSnackbarProvider>
+        <Refine
+          dataProvider={dataProvider("http://localhost:8080/api/v1")}
+          notificationProvider={notificationProvider}
+          ReadyPage={ReadyPage}
+          catchAll={<ErrorComponent />}
+          resources={[
+            {
+              name: "restaurants",
+              options:{ label: 'Restaurants' },
+              list:AllRestaurants,
+              show:RestaurantDetails,
+              create:CreateRestaurant,
+              edit:EditRestaurant,
+              icon: <Restaurant></Restaurant>
+            },
+            {
+              name: "brokers",
+              list:Brokers,
+              show:BrokerProfile,
+              icon: <PeopleAltOutlined></PeopleAltOutlined>
+            }
+
+          ]}
+          Title={Title}
+          Sider={Sider}
+          Layout={Layout}
+          Header={Header}
+          routerProvider={routerProvider}
+          authProvider={authProvider}
+          LoginPage={Login}
+          DashboardPage={Statistics}
+        />
+      </RefineSnackbarProvider>
+    </ColorModeContextProvider>
+  );
+}
+
   return (
     <ColorModeContextProvider>
       <CssBaseline />
@@ -170,17 +221,6 @@ const authProvider: AuthProvider = {
               edit:EditRestaurant,
               
               icon: <Restaurant></Restaurant>
-            },
-            {
-              name: "agents",
-              
-              icon: <PeopleAltOutlined></PeopleAltOutlined>
-            },
-            {
-              name: "about-us",
-              options:{ label: 'About Us' },
-              
-              icon: <InfoIcon></InfoIcon>
             },
             {
               name: "my-profile",

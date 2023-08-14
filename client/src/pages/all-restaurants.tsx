@@ -53,7 +53,7 @@ const AllRestaurants = () => {
           })
         );
           // proveri da li je  admin i oznaci u bazi
-          if (profileObj.email === "homenow.manager@gmail.com") {
+          if (profileObj.email === "tasteofbelgrade2023@gmail.com") {
             localStorage.setItem("isAdmin", "true");
           } else {
             localStorage.removeItem("isAdmin");
@@ -218,7 +218,7 @@ const AllRestaurants = () => {
                     >
                       {/*padajuca lista za tip nekretnine, mapira jedan po jedan i prikazuje u meniju malim slovima*/}
                       <MenuItem value="">All</MenuItem>
-                      {['Italian Restaurant', 'Steakhouse', 'Sushi Bar', 'Mexican Taqueria', 'Café or Bistro', 'Seafood Restaurant', 'Traditional Restaurant'].map((type) => (
+                      {['Italian Restaurant', 'Steakhouse', 'Sushi Bar', 'Mexican Taqueria', 'Cafe or Bistro', 'Seafood Restaurant', 'Traditional Restaurant'].map((type) => (
                           <MenuItem key={type} value={type.toLowerCase()}>{type}</MenuItem>
                       ))}
                     </Select>

@@ -4,48 +4,51 @@ import ReactApexChart from 'react-apexcharts'
 
 import { Typography, Box, Stack} from '@pankod/refine-mui'
 
-import { TotalRevenueOptions, TotalRevenueSeries } from './chart.config'
+import { ReservationCountOptions, ReservationCountSeries } from './chart.config'
 
 //za grafikon
-const totalRevenue = () => {
+const reservationCount = () => {
   return (
     <Box
       p={4}
       flex={1}
-      bgcolor="#fcfcfc"
+      bgcolor="#d5bdaf"
       id="chart"
       display="flex"
       flexDirection="column"
       borderRadius="15px"
     >
       <Typography fontSize={18} fontWeight={600} color="#11142d">
-        Total Revenue
+        Total Number Of Reservations On Web App
       </Typography>
 
       <Stack my="20px" direction="row" gap={4} flexWrap="wrap">
-        <Typography fontSize={28} fontWeight={700} color='#11142d'>$236,535</Typography>
+        <Typography fontSize={28} fontWeight={700} color='#11142d'>100.234 reservations</Typography>
         <Stack direction="row" alignItems="center" gap={1} >
           <ArrowCircleUpRounded sx={{
-            fontSize: 25, color: "#475be8"
+            fontSize: 30, color: "white"
           }}/>
           <Stack>
-            <Typography fontSize={15} color="#475be8">
-              0.8%
+            <Typography fontSize={20} color="white" fontWeight={'500px'}>
+              2.4%
             </Typography>
-            <Typography fontSize={12} color="#808191">
-              Than Last Month
+            <Typography fontSize={15} color="white">
+              More than last months reservations
             </Typography>
           </Stack>
         </Stack>
       </Stack>
+      
       <ReactApexChart
-        series={TotalRevenueSeries}
+        series={ReservationCountSeries}
         type="bar"
-        height={310}
-        options={TotalRevenueOptions}
+        height={510}
+        options={ReservationCountOptions}
+        
       />
+      
     </Box>
   )
 }
 
-export default totalRevenue
+export default reservationCount

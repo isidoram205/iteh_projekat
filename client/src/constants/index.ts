@@ -1,28 +1,40 @@
 //koriscene na dashboardu za status barove
-export const propertyReferralsInfo = [
+export const restaurantsStatisticsInfo = [
     {
-      title: 'Social Media',
-      percentage: 64,
-      color: '#6C5DD3',
+      title: 'Social Media Reach',
+      percentage: 67,
+      color: '#d5bdaf',
     },
     {
-      title: 'Marketplace',
+      title: 'Google Searches',
       percentage: 40,
-      color: '#7FBA7A',
+      color: '#d9b09d',
     },
     {
-      title: 'Websites',
-      percentage: 50,
-      color: '#FFCE73',
+      title: 'Returning Customers',
+      percentage: 60,
+      color: '#b69f93',
     },
     {
-      title: 'Digital Ads',
+      title: 'Booking Success Rate',
+      percentage: 95,
+      color: '#d9b09d',
+    },
+    {
+      title: 'Website Reservations',
       percentage: 80,
-      color: '#FFA2C0',
+      color: '#d9b09d',
     },
     {
-      title: 'Others',
-      percentage: 15,
-      color: '#F45252',
+      title: 'Mobile App Reservations',
+      percentage: 85,
+      color: '#d5bdaf',
     },
+    {
+      title: 'Group Bookings (4+ people)',
+      percentage: 20,
+      color: '#b69f93',
+    },
+
+    
   ];

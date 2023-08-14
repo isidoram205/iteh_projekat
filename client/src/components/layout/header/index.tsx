@@ -43,7 +43,7 @@ export const Header: React.FC = () => {
             justifyContent="center"
           >
             {user?.name ? (
-              <Typography variant="subtitle2">{user?.name}</Typography>
+              <Typography variant="subtitle2" fontSize={20}>{user?.name}</Typography>
             ) : null}
             {user?.avatar ? (
               <Avatar src={user?.avatar} alt={user?.name} />

@@ -29,7 +29,7 @@ const Profile = ({ type, name, avatar, email, restaurants }: ProfileProps) => (
             >
                 <img
                     src="https://insights.ehotelier.com/wp-content/uploads/sites/6/2022/02/restaurant-management-skills.jpeg"
-                    width={450}
+                    width={465}
                     height={300}
                     alt="abstract"
                     className="my_profile-bg"
