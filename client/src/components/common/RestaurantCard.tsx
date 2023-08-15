@@ -5,7 +5,7 @@ import { Typography, Box, Card, CardMedia, CardContent, Stack } from "@pankod/re
 import { RestaurantCardProps } from "interfaces/restaurant";
 
 
-//prima parametra iz interfejsa i prikazuje na kartici nekretnine
+//prima parametra iz interfejsa i prikazuje na kartici restorana
 const RestaurantCard = ({id, title, location, price, photo}: RestaurantCardProps) => {
   return (
     <Card

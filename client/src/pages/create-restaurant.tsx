@@ -18,7 +18,7 @@ const CreateRestaurant = () => {
   const { refineCore: { onFinish, formLoading}, register, handleSubmit} = useForm();
 
 
-  //U handleImageChange se definise funkcija za promenu slike za nekretninu. 
+  //U handleImageChange se definise funkcija za promenu slike za restoran. 
   //Ova funkcija prima fajl kao argument, zatim se kreira novi Promise koji koristi FileReader API kako bi se 
   //pretvorio fajl u Data URL, nakon cega se stanje restaurantImage azurira sa novim imenom i URL-om.
   const handleImageChange = (file: File) => {
@@ -31,11 +31,11 @@ const CreateRestaurant = () => {
     reader(file).then((result: string) => setRestaurantImage({ name: file?.name, url: result }));
   };
 
-//U onFinishHandler se definise funkcija koja se poziva kada se formular za kreiranje nekretnine zavrsi. 
-//Prvo se proverava da li je korisnik dodao sliku za nekretninu. Ako nije, prikazuje se upozorenje
+//U onFinishHandler se definise funkcija koja se poziva kada se formular za kreiranje restorana zavrsi. 
+//Prvo se proverava da li je korisnik dodao sliku za restoran. Ako nije, prikazuje se upozorenje
   const onFinishHandler = async (data:FieldValues) => {
     if (!restaurantImage.name) return alert('Please upload a restaurant image');
-    // u suprotnom poziva se onFinish funkcija i salju se podaci formulara, URL slike za nekretninu i email korisnika.
+    // u suprotnom poziva se onFinish funkcija i salju se podaci formulara, URL slike za restoran i email korisnika.
     await onFinish({ ...data, photo: restaurantImage.url, email: user.email });
   };
 

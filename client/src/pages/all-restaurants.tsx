@@ -153,7 +153,7 @@ const AllRestaurants = () => {
     const logicalFilters = filters.flatMap((item) => ('field' in item ? item : []))
 
     return {
-      //currentFilterValues omogućava filtriranje po nazivu nekretnine i tipu imovine.
+      //currentFilterValues omogućava filtriranje po nazivu restorana i tipu imovine.
       // Ako filter ne postoji, koristi se podrazumevana vrednost ''.
       title: logicalFilters.find((item) => item.field === 'title')?.value || '',
       restaurantType: logicalFilters.find((item) => item.field === 'restaurantType')?.value || '',
@@ -197,7 +197,7 @@ const AllRestaurants = () => {
                       ])
                       }}
                     />
-                    {/* pretraga po tipu nekretnine*/}
+                    {/* pretraga po tipu restorana*/}
                     <Select
                       variant="outlined"
                       color="info"
@@ -216,7 +216,7 @@ const AllRestaurants = () => {
                     ], 'replace')
                   }}
                     >
-                      {/*padajuca lista za tip nekretnine, mapira jedan po jedan i prikazuje u meniju malim slovima*/}
+                      {/*padajuca lista za tip restorana, mapira jedan po jedan i prikazuje u meniju malim slovima*/}
                       <MenuItem value="">All</MenuItem>
                       {['Italian Restaurant', 'Steakhouse', 'Sushi Bar', 'Mexican Taqueria', 'Cafe or Bistro', 'Seafood Restaurant', 'Traditional Restaurant'].map((type) => (
                           <MenuItem key={type} value={type.toLowerCase()}>{type}</MenuItem>
